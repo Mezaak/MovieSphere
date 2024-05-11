@@ -1,4 +1,10 @@
+.header {
+    margin-bottom: 2rem;
+}
+
+
 .header .heading {
     text-align: center;
     margin-top: 10px;
+    font-size: 50px;
 }
