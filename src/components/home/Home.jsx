@@ -6,7 +6,10 @@ const Home = () => {
   return (
     <div>
         <Header/>
+        <div className='main-content'>
         <Search/>
+        </div>
+        
 
     </div>
   )
