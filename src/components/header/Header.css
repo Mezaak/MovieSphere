@@ -1,1 +1,4 @@
-.header .heading
+.header .heading {
+    text-align: center;
+    margin-top: 10px;
+}
