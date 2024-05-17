@@ -1,7 +1,7 @@
 import React from 'react'
 import './Search.css'
 
-const Search = (({handleSearch})) => {
+const Search = ({handleSearch}) => {
   return (
     <div className='search'>
         <input type="search" placeholder='Search here...' className='search-input' 

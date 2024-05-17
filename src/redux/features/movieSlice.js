@@ -1,9 +1,17 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import {createSlice} from '@reduxjs/toolkit'
 import axios from 'axios'
+import { BASE_API_URL } from '../../utils/constants';
 
 export const getMovies = createAsyncThunk('movies',async () =>{
-    const {data} = axios.get(`${BASE_API_URL}/search/movie?query=batman&api_key=${import.meta.env.VITE_MOVIE_API_KEY}`);
+    try{
+       const {data} = await axios.get(`${BASE_API_URL}/search/movie?query=batman&api_key=${import.meta.env.VITE_MOVIE_API_KEY}`);
+       
+       return data.results;
+    } catch (error){
+        console.log('error',error);
+    }
+    
     return data;
 });
 const movieSlice = createSlice({
