@@ -1,0 +1,9 @@
+.movie-details{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.movie-details-info{
+    display: flex;
+    justify-content: space-between;
+}

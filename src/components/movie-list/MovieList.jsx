@@ -1,5 +1,5 @@
 import React from 'react'
-import Movie from '../../movie/Movie'
+import Movie from './movie/Movie'
 import './MovieList.css'
 
 const MovieList = ({movies}) => {

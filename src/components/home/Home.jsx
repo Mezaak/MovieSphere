@@ -17,11 +17,11 @@ console.log('movies', movies)
 
   return (
     <div>
-        <Header/>
+        
         <div className='main-content'>
         <Search handleSearch={handleSearch}/>
-        {isLoading && <p>Loading...</p> }
-        {errorMsg && <p>{errorMsg}</p> }
+        {isLoading && <p className='loading'>Loading...</p> }
+        {errorMsg && <p className='error-msg'>{errorMsg}</p> }
         {movies.length > 0 && <MovieList movies={movies}/> }
         
         </div>

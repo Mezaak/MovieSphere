@@ -1,3 +1,26 @@
 .movie-list{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2rem;
+    list-style: none;
+    padding:0;
+    margin:0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.movie-list .movie{
+    width:250px;
+    min-height:250px;
+
+}
+
+.movie-list .movie .movie-info{
+    margin-top: 1rem;
+}
+
+.movie-list .movie .movie-img{
+    width:250px;
+    height:250px;
+
 }
