@@ -14,7 +14,11 @@ const Details = () => {
     dispatch(getMovieDetails(id));
   },[id]);
 
-  const {title,poster_path} = details;
+  if(!details){
+    return null;
+  }
+
+  const {title,poster_path,release_date,vote_average,overview} = details;
 
 
 
@@ -28,7 +32,9 @@ const Details = () => {
 
     <div>
     <h2>{title}</h2>
-    <div></div>
+    <div>Release Date: {release_date} </div>
+    <div>Rating: {vote_average.toFixed(1)}</div>
+    <div>Description: {overview}</div>
     </div>
 
 

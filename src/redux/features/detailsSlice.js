@@ -7,7 +7,7 @@ export const getMovieDetails = createAsyncThunk('details',async (id) =>{
     try{
        const {data} = await axios.get(`${BASE_API_URL}/movie/268?api_key=${import.meta.env.VITE_MOVIE_API_KEY}`);
        
-       return data.results;
+       return data;
     } catch (error){
         console.log('error',error);
     }
