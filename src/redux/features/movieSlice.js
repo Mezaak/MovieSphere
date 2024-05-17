@@ -3,7 +3,7 @@ import {createSlice} from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const getMovies = createAsyncThunk('movies',async () =>{
-    const {data} = axios.get('');
+    const {data} = axios.get(`${BASE_API_URL}/search/movie?query=batman`);
     return data;
 });
 const movieSlice = createSlice({
