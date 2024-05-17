@@ -3,7 +3,7 @@ import {createSlice} from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export const getMovies = createAsyncThunk('movies',async () =>{
-    const {data} = axios.get(`${BASE_API_URL}/search/movie?query=batman`);
+    const {data} = axios.get(`${BASE_API_URL}/search/movie?query=batman&api_key=${import.meta.env.VITE_MOVIE_API_KEY}`);
     return data;
 });
 const movieSlice = createSlice({
@@ -14,7 +14,7 @@ const movieSlice = createSlice({
         data:[],
     },
     extraReducers: (builder) => {
-        builder.addCase(getMovies.pending, (state,action) =>{
+        builder.addCase(getMovies.pending, (state) =>{
             state.isLoading = true;
             state.errorMsg = '';
         }),
@@ -23,7 +23,7 @@ const movieSlice = createSlice({
             state.errorMsg = '';
             state.data = action.payload;
         }),
-        builder.addCase(getMovies.rejected, (state,action) =>{
+        builder.addCase(getMovies.rejected, (state) =>{
             state.isLoading = false;
             state.errorMsg = 'Error while getting list of movies, Try again later';
             state.data = action.payload;
