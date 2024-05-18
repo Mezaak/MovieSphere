@@ -10,6 +10,7 @@ export const getMovies = createAsyncThunk('movies',async (query) =>{
        return data.results;
     } catch (error){
         console.log('error',error);
+        throw error;
     }
     
     return data;
