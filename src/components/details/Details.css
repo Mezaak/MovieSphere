@@ -1,42 +1,48 @@
-/* .movie-details{
-    max-width:900px;
-    margin:0 auto;
-}
-
-.movie-details .movie-details-info{
-    display: flex;
-    justify-content: space-between;
-    gap:2rem;
-}
-
-.movie-details .movie-details-info .extra-details > *{
-    margin:1rem;
-}
-
-.movie-details .movie-details-info .img{
-    width: 350px;
-    height: 500px;
-
-} */
 .movie-details {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start; /* Resim ve detayların dikeyde üst kısımlara hizalanması */
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 2rem; 
+}
+
+.movie-details .movie-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+}
+
+.movie-details .movie-details-info h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.movie-details .movie-details-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.movie-details .movie-details-info .img {
+  width: 100%; 
+  height: auto; 
+  max-width: 350px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.extra-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .movie-details {
+    grid-template-columns: 1fr; 
   }
-  
-  .movie-details .movie-details-info {
-    flex: 1; /* Resimden kalan boşluğu kaplamak için */
-    display: flex;
-    flex-direction: column; /* Dikeyde sıralamak için */
-    gap: 1rem; /* İstediğiniz boşluk miktarı */
-  }
-  
+
   .movie-details .movie-details-info .img {
-    width: 350px;
-    height: 500px;
+    max-width: 100%; 
   }
-  
-  .extra-details {
-    flex: 1; /* Resimden kalan boşluğu kaplamak için */
-  }
+}
