@@ -13,6 +13,9 @@ const Home = () => {
   dispatch(getMovies());
 
 }
+
+
+
 console.log('movies', movies)
 
   return (

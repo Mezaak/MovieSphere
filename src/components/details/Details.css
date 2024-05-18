@@ -1,13 +1,42 @@
-.movie-details{
+/* .movie-details{
     max-width:900px;
     margin:0 auto;
 }
 
-.movie-details-info{
+.movie-details .movie-details-info{
     display: flex;
     justify-content: space-between;
+    gap:2rem;
 }
 
-.movie-details-info{
-    
+.movie-details .movie-details-info .extra-details > *{
+    margin:1rem;
 }
+
+.movie-details .movie-details-info .img{
+    width: 350px;
+    height: 500px;
+
+} */
+.movie-details {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start; /* Resim ve detayların dikeyde üst kısımlara hizalanması */
+  }
+  
+  .movie-details .movie-details-info {
+    flex: 1; /* Resimden kalan boşluğu kaplamak için */
+    display: flex;
+    flex-direction: column; /* Dikeyde sıralamak için */
+    gap: 1rem; /* İstediğiniz boşluk miktarı */
+  }
+  
+  .movie-details .movie-details-info .img {
+    width: 350px;
+    height: 500px;
+  }
+  
+  .extra-details {
+    flex: 1; /* Resimden kalan boşluğu kaplamak için */
+  }

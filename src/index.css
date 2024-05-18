@@ -24,4 +24,30 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+.loading,
+.error-msg{
+    text-align:center;
+    font-size:18px;
+    letter-spacing:1px;
+    font-weight: bold;
+    margin:1rem 0;
+}
 
+.error-msg{
+    color:#ff0000;
+}
+
+@media screen and (max-width:768px){
+    .search .search-input{
+        width:90%;
+
+    }
+    .header .heading{
+        font-size:35px;
+    }
+    .movie-details .movie-details-info{
+        flex-direction: column;
+        align-items:center;
+    }
+
+}
