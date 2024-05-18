@@ -10,10 +10,17 @@
     margin-bottom: 2rem;
 }
 .movie-list .movie{
-    width:250px;
-    min-height:250px;
-
+    width: 250px;
+    min-height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.3s ease;
 }
+
+.movie-list .movie:hover{
+    background-color: darkturquoise;
+    transform: scale(1.05);
+}
+
 
 .movie-list .movie .movie-info{
     margin-top: 1rem;

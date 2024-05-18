@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='header'>
       <Link to='/' className='link'>
-        <h1 className='heading'>Movie Search App</h1>
+        <h1 className='heading'>MovieSphere🍿</h1>
       </Link>
         
     </div>

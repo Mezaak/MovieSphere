@@ -41,7 +41,7 @@ const Details = () => {
     <div><span>Release Date: </span>{release_date}</div>
     <div>Rating: {vote_average ? Number(vote_average).toFixed(1) : 'N/A'}</div>
     <div>Description: {overview}</div>
-    <div><span>Cast:</span></div>
+    
     </div>
 
 
