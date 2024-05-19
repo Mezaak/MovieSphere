@@ -14,6 +14,7 @@
     min-height: 250px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: all 0.3s ease;
+    border-radius: 25px;
 }
 
 .movie-list .movie:hover{
@@ -29,5 +30,6 @@
 .movie-list .movie .movie-img{
     width:250px;
     height:250px;
+    border-radius: 25px 25px 0px 0px;
 
 }
