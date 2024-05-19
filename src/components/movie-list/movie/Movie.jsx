@@ -14,6 +14,7 @@ const Movie = ({movie}) => {
             <h3>{title}</h3>
             <div>Release date :{release_date}</div>
             <div>Rating : {vote_average.toFixed(1)}</div>
+            <button className='button-18' role="button">Add to Favourite 👍🏻</button>
             
 
         </div>

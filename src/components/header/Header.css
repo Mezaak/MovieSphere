@@ -14,3 +14,6 @@
     text-decoration: none;
 
 }
+.my-list{
+    display: flex;
+}
